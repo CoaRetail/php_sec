@@ -11,9 +11,9 @@ export default function Proof() {
         <h3 className="infog__ttl">報告書のイメージ</h3>
         <div className="doc">
           <p className="doc__hd">診断報告書 <small>※イメージ</small></p>
-          <p className="doc__row"><b className="lv lv--h">高</b><span>[指摘事項を記載]</span><em>まず対応</em></p>
-          <p className="doc__row"><b className="lv lv--m">中</b><span>[指摘事項を記載]</span><em>次に対応</em></p>
-          <p className="doc__row"><b className="lv lv--l">低</b><span>[指摘事項を記載]</span><em>計画的に</em></p>
+          <p className="doc__row"><b className="lv lv--h">高</b><span>優先して対応する項目</span><em>まず対応</em></p>
+          <p className="doc__row"><b className="lv lv--m">中</b><span>計画的に対応する項目</span><em>次に対応</em></p>
+          <p className="doc__row"><b className="lv lv--l">低</b><span>状況を見ながら確認する項目</span><em>経過観察</em></p>
         </div>
       </figure>
       <div className="grid">

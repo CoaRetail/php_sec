@@ -8,7 +8,8 @@ export default function Hero() {
       <p className="fv__lead rv">顧客への約束を守れない。納期が迫っている。社内では解決できない。そんな状況を解消するための支援です。</p>
       <div className="fv__fig rv"><HeroFigure /></div>
       <div className="btns">
-        <a className="btn btn--cta" href="#contact" data-cta="consult">無料で相談・チェックを申し込む</a>
+        <a className="btn btn--cta" href="#contact" data-cta="consult">現在の状況を無料で相談する</a>
+        <p className="cta-note">ご相談内容を確認し、対応可能な範囲と次の進め方をご案内します。調査・修正作業は、内容確認後のお見積もりとなります。</p>
         <a className="link" href="#proof">任せられる理由を見る</a>
       </div>
     </section>

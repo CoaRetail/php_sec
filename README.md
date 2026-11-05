@@ -23,5 +23,4 @@ Vercelにはそのままデプロイ可能 (Framework: Next.js)。
 ## 未実装
 - 問い合わせフォーム: Airtableのフォームをiframeで埋め込み済み(`src/config.ts` の `form`)。相談種別をプリフィルするには、Airtable側に単一選択の項目「相談種別」(選択肢名は `ContactForm.tsx` の `LABELS` と完全一致)を作る
 - 計測: `gtmId` を設定した場合のみ dataLayer に送信 (problem_card_click / problem_section_view / problem_cta_click)
-- `[XX]` などのプレースホルダーは実データに置換
 - 公開前に `src/config.ts` の `noindex` を false に

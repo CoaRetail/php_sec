@@ -183,3 +183,5 @@ section[id]{scroll-margin-top:16px}
 
 .close__form{max-width:480px;margin:0 auto}
 .airtable-embed{display:block;width:100%;border:1px solid var(--line);border-radius:12px;background:transparent}
+
+.cta-note{font-size:13px;color:var(--dim);line-height:1.7;margin:-2px 0 4px}

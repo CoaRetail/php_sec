@@ -8,7 +8,8 @@ export function SideLeft() {
       <p className="side__tag">{siteConfig.service}</p>
       <p className="side__catch">仕事はある。<br />でも、<b>対応できる人がいない。</b></p>
       <div className="btns">
-        <a className="btn btn--cta" href="#contact" data-cta="consult">無料で相談・チェックを申し込む</a>
+        <a className="btn btn--cta" href="#contact" data-cta="consult">現在の状況を無料で相談する</a>
+        <p className="cta-note">ご相談内容を確認し、対応可能な範囲と次の進め方をご案内します。調査・修正作業は、内容確認後のお見積もりとなります。</p>
         {siteConfig.phone && <a className="btn btn--tel" href={`tel:${siteConfig.phone}`}>電話で相談する</a>}
       </div>
     </aside>
@@ -38,7 +39,7 @@ export function Tags() {
 export function StickyCta() {
   return (
     <div className="stick" id="stick">
-      <a className="btn btn--cta" href="#contact" data-cta="consult">無料で相談・チェックを申し込む</a>
+      <a className="btn btn--cta" href="#contact" data-cta="consult">現在の状況を無料で相談する</a>
     </div>
   );
 }
