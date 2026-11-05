@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover" };
 
-const GTM_SNIPPET = (id: string) =>
-  `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${id}');`;
+const GTAG_BOOTSTRAP =
+  "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const { gtmId } = siteConfig;
@@ -21,9 +21,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         {gtmId ? (
-          <script dangerouslySetInnerHTML={{ __html: "window.dataLayer=window.dataLayer||[];" }} />
+          <>
+            <Script id="gtm-js" src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`} strategy="afterInteractive" />
+            <script dangerouslySetInnerHTML={{ __html: GTAG_BOOTSTRAP }} />
+          </>
         ) : null}
-        {gtmId ? <Script id="gtm" strategy="beforeInteractive">{GTM_SNIPPET(gtmId)}</Script> : null}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" />
