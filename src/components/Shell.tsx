@@ -12,6 +12,8 @@ export function SideLeft() {
         <p className="cta-note">ご相談内容を確認し、対応可能な範囲と次の進め方をご案内します。調査・修正作業は、内容確認後のお見積もりとなります。</p>
         {siteConfig.phone && <a className="btn btn--tel" href={`tel:${siteConfig.phone}`}>電話で相談する</a>}
       </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="side__img" src="/images/security-alert.gif" alt="赤い警告灯と「今、セキュリティリスクが高まっています」の文字" width={508} height={507} loading="lazy" decoding="async" />
     </aside>
   );
 }
