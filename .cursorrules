@@ -1,0 +1,9 @@
+- Next.js 14 App Router + TypeScript。依存を増やさない。サーバーコンポーネントを基本とし、"use client" は IndexNav / LpEffects のみ。
+- 文言は src/data/content.ts、設定は src/config.ts、スタイルは src/app/globals.css。インラインstyleを増やさない。
+- 日本語のB2B向けLP。既存のデザイン(オフホワイト基調)を維持し、全面変更しない。
+- 根拠のない数値・実績・料金・納期・「必ず復旧」「100%安全」「24時間対応」を書かない。未確定は `[ ]` のまま残す。
+- CTAの色は var(--cta) (#06C755)、文字色は #04210F。
+- H1はページに1つ。各テーマはH2以下。JSで本文を隠さない。
+- セクションIDは変更しない: fv / choose / security-compliance / web-maintenance / incident-response / pain / risk / scope / proof / contact
+- 計測イベント名: problem_card_click, problem_section_view, problem_cta_click, contact_form_start, contact_form_submit_success
+- 問い合わせフォームの送信先やAPIは、指示なく新設しない。
