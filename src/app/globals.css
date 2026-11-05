@@ -120,7 +120,10 @@ section[id]{scroll-margin-top:16px}
 #apply-security:target~.chips .chip-security,#apply-web:target~.chips .chip-web,#apply-incident:target~.chips .chip-incident,.chip.is-on{background:var(--cta);color:var(--cta-tx);border-color:var(--cta);font-weight:700}
 .close__form{max-width:480px;margin:0 auto}
 .devnote{border:1px dashed var(--line);padding:16px;color:var(--dim);font-size:13px}
-.foot{display:flex;justify-content:space-between;gap:12px;padding:24px 20px 96px;color:var(--dim);font-size:13px}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;padding:32px 20px 96px;color:var(--dim);font-size:13px}
+.foot__r{display:flex;flex-direction:column;align-items:flex-end;gap:6px;text-align:right}
+.foot__r a{color:var(--mut);text-decoration:underline;text-underline-offset:3px}
+.foot__r a:hover{color:var(--tx)}
 
 /* ---- sticky CTA (mobile) ---- */
 .stick{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,244,.94);transform:translateY(110%);transition:transform .25s}

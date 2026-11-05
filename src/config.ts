@@ -11,5 +11,7 @@ export const siteConfig = {
     prefillField: "相談種別", // Airtable側の項目名(プリフィル用)
     height: 720, // iframeの高さ(px)。項目数に応じて調整
   },
+  privacyUrl: "https://www.coaretail.com/lp_privacy", // プライバシーポリシーのURL
+  copyrightHolder: "CoaRetail G.K.", // コピーライトの表記
   phone: "", // 電話CTAを出す場合に設定
 };

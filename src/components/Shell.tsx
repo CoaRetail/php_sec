@@ -47,7 +47,10 @@ export function Footer() {
   return (
     <footer className="foot">
       <span className="logo">{siteConfig.name}</span>
-      <small>&copy; {siteConfig.name}</small>
+      <div className="foot__r">
+        <a href={siteConfig.privacyUrl} target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
+        <small>&copy; {new Date().getFullYear()} {siteConfig.copyrightHolder} All rights reserved.</small>
+      </div>
     </footer>
   );
 }
