@@ -15,5 +15,6 @@ export const siteConfig = {
   ga4MeasurementId: "G-BS30YQY1N7",
   privacyUrl: "https://www.coaretail.com/lp_privacy", // プライバシーポリシーのURL
   copyrightHolder: "CoaRetail G.K.", // コピーライトの表記
+  copyrightUrl: "https://www.coaretail.com",
   phone: "", // 電話CTAを出す場合に設定
 };

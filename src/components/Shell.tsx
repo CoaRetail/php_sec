@@ -52,7 +52,13 @@ export function Footer() {
       <span className="logo">{siteConfig.name}</span>
       <div className="foot__r">
         <a href={siteConfig.privacyUrl} target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
-        <small>&copy; {new Date().getFullYear()} {siteConfig.copyrightHolder} All rights reserved.</small>
+        <small>
+          &copy; {new Date().getFullYear()}{" "}
+          <a href={siteConfig.copyrightUrl} target="_blank" rel="noopener noreferrer">
+            {siteConfig.copyrightHolder}
+          </a>{" "}
+          All rights reserved.
+        </small>
       </div>
     </footer>
   );
