@@ -16,12 +16,6 @@ export default function Contact() {
           { label: "対応範囲と進め方を案内", sub: "調査・修正は、お見積もりの後に開始" },
         ]} />
       </div>
-      <p className="dim">相談種別</p>
-      <div className="chips">
-        <a className="chip chip-security" href="#apply-security">セキュリティ調査票・是正対応</a>
-        <a className="chip chip-web" href="#apply-web">PHP・WordPress更新</a>
-        <a className="chip chip-incident" href="#apply-incident">サイト・システム障害</a>
-      </div>
       <div className="close__form" id="formSection">
         <ContactForm />
       </div>

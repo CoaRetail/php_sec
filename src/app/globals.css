@@ -188,3 +188,26 @@ section[id]{scroll-margin-top:16px}
 
 .side__img{display:block;width:min(100%,260px,30vh);aspect-ratio:1/1;height:auto;margin-top:24px;border-radius:12px}
 @media (max-height:700px){.side__img{display:none}}
+
+/* ---- contact form (自前フォーム) ---- */
+.close__form{max-width:520px;margin:0 auto;text-align:left}
+.cform{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 22px}
+.cform__ttl{font-size:20px;font-weight:900;margin-bottom:20px}
+.cform__row{margin-bottom:18px}
+.cform__row label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+.cform .req{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:4px;background:var(--alert);color:#fff;font-size:11px;font-weight:700;vertical-align:1px}
+.cform .opt{margin-left:6px;font-size:12px;font-weight:400;color:var(--dim)}
+.cform input[type=text],.cform input[type=url],.cform input[type=email],.cform select,.cform textarea{display:block;width:100%;padding:13px 14px;border:1px solid #CFC9BB;border-radius:10px;background:#fff;color:var(--tx);font:inherit;font-size:16px;line-height:1.5}
+.cform textarea{resize:vertical;min-height:130px}
+.cform select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#5F6778 50%),linear-gradient(135deg,#5F6778 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 14px) 55%;background-size:6px 6px;background-repeat:no-repeat;padding-right:38px}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:3px solid rgba(6,199,85,.35);border-color:var(--cta)}
+.cform ::placeholder{color:#8A93A6}
+.cform__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cform__consent{display:flex;align-items:flex-start;gap:10px;margin:6px 0 20px;font-size:14px;line-height:1.6;cursor:pointer}
+.cform__consent input{flex:none;width:20px;height:20px;margin-top:2px;accent-color:var(--cta)}
+.cform__consent a{text-decoration:underline;text-underline-offset:3px}
+.cform__err{margin:0 0 14px;padding:12px 14px;border-radius:10px;background:#FBEAE8;color:#9B2420;font-size:14px;font-weight:700}
+.cform__submit{width:100%;border:0;cursor:pointer;font-family:inherit}
+.cform__submit:disabled{opacity:.6;cursor:wait}
+.cform--done{text-align:center;padding:40px 22px}
+.cform__thanks{font-size:20px;font-weight:900;margin-bottom:10px}

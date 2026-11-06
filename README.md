@@ -20,8 +20,11 @@ Vercelにはそのままデプロイ可能 (Framework: Next.js)。
 | 見た目(色・幅は先頭の変数) | `src/app/globals.css` |
 | スクロール表示・固定CTA・計測・相談種別 | `src/components/LpEffects.tsx` |
 | 右パネルの目次 | `src/data/content.ts` の `indexItems` + `IndexNav.tsx` |
+| 相談種別ラベル | `src/data/consult.ts` |
+| 問い合わせ送信 API | `src/app/api/contact/route.ts` |
+| Airtable / Slack / Turnstile の鍵 | `.env` または Vercel（`.env.example` 参照。トークン・Webhook はリポジトリに置かない） |
 
 ## 未実装
-- 問い合わせフォーム: Airtableのフォームをiframeで埋め込み済み(`src/config.ts` の `form`)。相談種別をプリフィルするには、Airtable側に単一選択の項目「相談種別」(選択肢名は `ContactForm.tsx` の `LABELS` と完全一致)を作る
+- 問い合わせフォーム: 自前フォーム(`ContactForm.tsx`) → `src/app/api/contact/route.ts` → Airtable。成功後に `SLACK_WEBHOOK_URL` があれば Slack へ通知（失敗しても問い合わせは成功扱い）。`.env.example` の `AIRTABLE_*` / `SLACK_WEBHOOK_URL` を Vercel / `.env` に設定する。トークンはサーバー側のみ。Airtable側の項目名・選択肢名は `route.ts` の `FIELD` と `src/data/consult.ts` に完全一致させる
 - 計測: `NEXT_PUBLIC_GTM_ID` 設定時のみ GTM 読込 + dataLayer 送信。GTM→GA4 のタグ設定手順は Vault `70_outputs/php_sec_GTM_GA4_setup.md`
 - 公開前に `src/config.ts` の `noindex` を false に
